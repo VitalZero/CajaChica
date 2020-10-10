@@ -34,6 +34,10 @@
             this.fondo = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.directorioArchivos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // label7
@@ -47,7 +51,7 @@
             // 
             // custodio
             // 
-            this.custodio.Location = new System.Drawing.Point(157, 14);
+            this.custodio.Location = new System.Drawing.Point(17, 35);
             this.custodio.MaxLength = 3272;
             this.custodio.Name = "custodio";
             this.custodio.Size = new System.Drawing.Size(116, 23);
@@ -56,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 47);
+            this.label1.Location = new System.Drawing.Point(139, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 15);
             this.label1.TabIndex = 20;
@@ -64,7 +68,7 @@
             // 
             // fondo
             // 
-            this.fondo.Location = new System.Drawing.Point(157, 44);
+            this.fondo.Location = new System.Drawing.Point(142, 35);
             this.fondo.MaxLength = 3272;
             this.fondo.Name = "fondo";
             this.fondo.Size = new System.Drawing.Size(116, 23);
@@ -73,7 +77,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(92, 74);
+            this.btnAceptar.Location = new System.Drawing.Point(171, 108);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(87, 27);
             this.btnAceptar.TabIndex = 21;
@@ -83,18 +87,47 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(187, 74);
+            this.btnCancelar.Location = new System.Drawing.Point(266, 108);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 27);
             this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // directorioArchivos
+            // 
+            this.directorioArchivos.Location = new System.Drawing.Point(98, 79);
+            this.directorioArchivos.Name = "directorioArchivos";
+            this.directorioArchivos.Size = new System.Drawing.Size(255, 23);
+            this.directorioArchivos.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 15);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Ruta de Archivos";
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Location = new System.Drawing.Point(17, 78);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionar.TabIndex = 25;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.OnSeleccionarClick);
+            // 
             // Configuracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 118);
+            this.ClientSize = new System.Drawing.Size(369, 150);
+            this.Controls.Add(this.btnSeleccionar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.directorioArchivos);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label1);
@@ -120,5 +153,9 @@
         private System.Windows.Forms.TextBox fondo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox directorioArchivos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowser;
     }
 }

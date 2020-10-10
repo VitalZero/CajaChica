@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Dirección Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Operación Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Planta de Tratamiento", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Dirección Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Operación Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Planta de Tratamiento", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "aaa",
             "b",
             "a"}, -1);
@@ -183,15 +183,16 @@
             // menuAgregarDepartamento
             // 
             this.menuAgregarDepartamento.Name = "menuAgregarDepartamento";
-            this.menuAgregarDepartamento.Size = new System.Drawing.Size(180, 22);
+            this.menuAgregarDepartamento.Size = new System.Drawing.Size(150, 22);
             this.menuAgregarDepartamento.Text = "Departamento";
             this.menuAgregarDepartamento.Click += new System.EventHandler(this.OnMenuDeptoClick);
             // 
             // menuAgregarCuenta
             // 
             this.menuAgregarCuenta.Name = "menuAgregarCuenta";
-            this.menuAgregarCuenta.Size = new System.Drawing.Size(150, 22);
+            this.menuAgregarCuenta.Size = new System.Drawing.Size(180, 22);
             this.menuAgregarCuenta.Text = "Cuenta";
+            this.menuAgregarCuenta.Click += new System.EventHandler(this.OnMenuCuentasClick);
             // 
             // toolStripMenuItem3
             // 
@@ -216,7 +217,7 @@
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.OnMenuAcercaDe);
             // 
@@ -306,7 +307,7 @@
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(12, 100);
+            this.label5.Location = new System.Drawing.Point(12, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(748, 1);
             this.label5.TabIndex = 11;
@@ -320,20 +321,20 @@
             this.columnHeader3});
             this.listFacturas.FullRowSelect = true;
             this.listFacturas.GridLines = true;
-            listViewGroup10.Header = "Dirección Mantenimiento Campo";
-            listViewGroup10.Name = "lvg1";
-            listViewGroup11.Header = "Operación Mantenimiento Campo";
-            listViewGroup11.Name = "lvg2";
-            listViewGroup12.Header = "Planta de Tratamiento";
-            listViewGroup12.Name = "lvg3";
+            listViewGroup7.Header = "Dirección Mantenimiento Campo";
+            listViewGroup7.Name = "lvg1";
+            listViewGroup8.Header = "Operación Mantenimiento Campo";
+            listViewGroup8.Name = "lvg2";
+            listViewGroup9.Header = "Planta de Tratamiento";
+            listViewGroup9.Name = "lvg3";
             this.listFacturas.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup10,
-            listViewGroup11,
-            listViewGroup12});
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9});
             this.listFacturas.HideSelection = false;
-            listViewItem4.Group = listViewGroup10;
+            listViewItem3.Group = listViewGroup7;
             this.listFacturas.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem3});
             this.listFacturas.Location = new System.Drawing.Point(12, 113);
             this.listFacturas.Name = "listFacturas";
             this.listFacturas.Size = new System.Drawing.Size(514, 275);
@@ -355,7 +356,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(532, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 15);
+            this.label6.Size = new System.Drawing.Size(89, 15);
             this.label6.TabIndex = 14;
             this.label6.Text = "Total Solicitado";
             // 
@@ -435,7 +436,7 @@
             // label11
             // 
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Location = new System.Drawing.Point(535, 255);
+            this.label11.Location = new System.Drawing.Point(535, 263);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(225, 1);
             this.label11.TabIndex = 23;
@@ -444,7 +445,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(532, 262);
+            this.label12.Location = new System.Drawing.Point(533, 279);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 15);
             this.label12.TabIndex = 25;
@@ -452,7 +453,7 @@
             // 
             // prestamos
             // 
-            this.prestamos.Location = new System.Drawing.Point(660, 259);
+            this.prestamos.Location = new System.Drawing.Point(661, 276);
             this.prestamos.MaxLength = 3272;
             this.prestamos.Name = "prestamos";
             this.prestamos.Size = new System.Drawing.Size(100, 23);
@@ -462,15 +463,15 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(532, 291);
+            this.label13.Location = new System.Drawing.Point(533, 308);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 15);
+            this.label13.Size = new System.Drawing.Size(124, 15);
             this.label13.TabIndex = 27;
             this.label13.Text = "Total Fondo Asignado";
             // 
             // fondoAsignado
             // 
-            this.fondoAsignado.Location = new System.Drawing.Point(660, 288);
+            this.fondoAsignado.Location = new System.Drawing.Point(661, 305);
             this.fondoAsignado.MaxLength = 3272;
             this.fondoAsignado.Name = "fondoAsignado";
             this.fondoAsignado.Size = new System.Drawing.Size(100, 23);
@@ -480,7 +481,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(532, 320);
+            this.label14.Location = new System.Drawing.Point(533, 337);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 15);
             this.label14.TabIndex = 29;
@@ -489,7 +490,7 @@
             // diferencia
             // 
             this.diferencia.Enabled = false;
-            this.diferencia.Location = new System.Drawing.Point(660, 317);
+            this.diferencia.Location = new System.Drawing.Point(661, 334);
             this.diferencia.MaxLength = 3272;
             this.diferencia.Name = "diferencia";
             this.diferencia.Size = new System.Drawing.Size(100, 23);
@@ -534,6 +535,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "Caja Chica";
+            this.Load += new System.EventHandler(this.OnMainWindowLoad);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

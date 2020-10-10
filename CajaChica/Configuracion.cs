@@ -16,5 +16,15 @@ namespace CajaChica
         {
             InitializeComponent();
         }
+
+        private void OnSeleccionarClick(object sender, EventArgs e)
+        {
+            DialogResult result = folderBrowser.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                directorioArchivos.Text = folderBrowser.SelectedPath;
+            }
+        }
     }
 }

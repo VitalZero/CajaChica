@@ -58,6 +58,12 @@
     <Compile Include="Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentas.Designer.cs">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Departamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentas.resx">
+      <DependentUpon>Cuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Departamentos.resx">
       <DependentUpon>Departamentos.cs</DependentUpon>

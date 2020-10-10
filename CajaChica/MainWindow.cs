@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,46 @@ namespace CajaChica
         {
             AboutBox about = new AboutBox();
             about.ShowDialog();
+        }
+
+        private void OnMenuCuentasClick(object sender, EventArgs e)
+        {
+            Cuentas cuentas = new Cuentas();
+            cuentas.ShowDialog();
+        }
+
+        private void OnMainWindowLoad(object sender, EventArgs e)
+        {
+            if (File.Exists("config.cfg"))
+            {
+
+            }
+            else
+            {
+                string rutaPorDefecto = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                using (StreamWriter file = new StreamWriter("config.cfg"))
+                {
+                    file.WriteLine("[CUSTODIO]");
+                    file.WriteLine("SIN ASIGNAR");
+                    file.WriteLine("[MONTO]");
+                    file.WriteLine("0.00");
+                    file.WriteLine("[RUTA]");
+                    file.WriteLine(rutaPorDefecto);
+                    file.Close();
+                }
+
+                // Crea archivos vacíos en la ruta configurada por defecto (Mis Documentos)
+                if(!File.Exists(rutaPorDefecto + "\\cuentas.txt"))
+                {
+                    File.OpenWrite(rutaPorDefecto + "\\cuentas.txt");
+                }
+
+                if (!File.Exists(rutaPorDefecto + "\\departamentos.txt"))
+                {
+                    File.OpenWrite(rutaPorDefecto + "\\departamentos.txt");
+                }
+            }
         }
     }
 }
