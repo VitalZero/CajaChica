@@ -1,6 +1,6 @@
 ﻿namespace CajaChica
 {
-    partial class Departamentos
+    partial class CuentaWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.descripcion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.idDepartamento = new System.Windows.Forms.TextBox();
+            this.idCuenta = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -42,7 +42,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(187, 74);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 27);
-            this.btnCancelar.TabIndex = 28;
+            this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -51,7 +51,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(92, 74);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(87, 27);
-            this.btnAceptar.TabIndex = 27;
+            this.btnAceptar.TabIndex = 33;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
@@ -61,7 +61,7 @@
             this.label1.Location = new System.Drawing.Point(14, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 15);
-            this.label1.TabIndex = 26;
+            this.label1.TabIndex = 32;
             this.label1.Text = "Descripción";
             // 
             // descripcion
@@ -70,27 +70,27 @@
             this.descripcion.MaxLength = 3272;
             this.descripcion.Name = "descripcion";
             this.descripcion.Size = new System.Drawing.Size(116, 23);
-            this.descripcion.TabIndex = 25;
+            this.descripcion.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(14, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 15);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Id Departamento";
+            this.label7.Size = new System.Drawing.Size(108, 15);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Número de Cuenta";
             // 
-            // idDepartamento
+            // idCuenta
             // 
-            this.idDepartamento.Location = new System.Drawing.Point(157, 14);
-            this.idDepartamento.MaxLength = 3272;
-            this.idDepartamento.Name = "idDepartamento";
-            this.idDepartamento.Size = new System.Drawing.Size(116, 23);
-            this.idDepartamento.TabIndex = 23;
-            this.idDepartamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.idCuenta.Location = new System.Drawing.Point(157, 14);
+            this.idCuenta.MaxLength = 3272;
+            this.idCuenta.Name = "idCuenta";
+            this.idCuenta.Size = new System.Drawing.Size(116, 23);
+            this.idCuenta.TabIndex = 29;
+            this.idCuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Departamentos
+            // Cuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,13 +100,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.descripcion);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.idDepartamento);
+            this.Controls.Add(this.idCuenta);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Departamentos";
-            this.Text = "Departamentos";
+            this.Name = "Cuentas";
+            this.Text = "Cuentas";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox descripcion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox idDepartamento;
+        private System.Windows.Forms.TextBox idCuenta;
     }
 }

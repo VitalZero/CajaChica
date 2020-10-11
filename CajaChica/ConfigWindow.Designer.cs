@@ -1,6 +1,6 @@
 ﻿namespace CajaChica
 {
-    partial class Configuracion
+    partial class ConfigWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -54,13 +54,13 @@
             this.custodio.Location = new System.Drawing.Point(17, 35);
             this.custodio.MaxLength = 3272;
             this.custodio.Name = "custodio";
-            this.custodio.Size = new System.Drawing.Size(116, 23);
+            this.custodio.Size = new System.Drawing.Size(214, 23);
             this.custodio.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 17);
+            this.label1.Location = new System.Drawing.Point(234, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 15);
             this.label1.TabIndex = 20;
@@ -68,7 +68,7 @@
             // 
             // fondo
             // 
-            this.fondo.Location = new System.Drawing.Point(142, 35);
+            this.fondo.Location = new System.Drawing.Point(237, 35);
             this.fondo.MaxLength = 3272;
             this.fondo.Name = "fondo";
             this.fondo.Size = new System.Drawing.Size(116, 23);

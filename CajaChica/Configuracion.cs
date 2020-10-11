@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,42 +8,93 @@ using System.Windows.Forms;
 
 namespace CajaChica
 {
-    public partial class Configuracion : Form
+    public class Configuracion
     {
-        Settings settings;
+        private double monto = 0.00;
+        private string archivo;
+        private string custodio;
+        private string ruta;
 
-        public Configuracion()
+        public Configuracion(string archivo = "config.cfg")
         {
-            InitializeComponent();
+            this.archivo = archivo;
+            custodio = "SIN ASIGNAR";
+            monto = 0.00;
         }
-        public void FijarSettings(Settings settings)
-        {
-            this.settings = settings;
-        }
 
-        private void OnSeleccionarClick(object sender, EventArgs e)
-        {
-            DialogResult result = folderBrowser.ShowDialog();
+        public double DarMonto() { return monto; }
 
-            if (result == DialogResult.OK)
+        public string DarCustodio() { return custodio; }
+
+        public string DarRuta() { return ruta; }
+
+        public void FijarMonto(double monto) { this.monto = monto; }
+
+        public void FijarCustodio(string custodio) { this.custodio = custodio; }
+
+        public void FijarRuta(string ruta) { this.ruta = ruta; }
+
+        public void CargarDatos()
+        {
+            if (File.Exists(archivo))
             {
-                directorioArchivos.Text = folderBrowser.SelectedPath;
+                using (StreamReader file = new StreamReader(archivo))
+                {
+                    string temp;
+                    while ((temp = file.ReadLine()) != null)
+                    {
+                        if (temp == "[CUSTODIO]")
+                        {
+                            custodio = file.ReadLine();
+                        }
+                        else if (temp == "[MONTO]")
+                        {
+                            monto = Convert.ToDouble(file.ReadLine());
+                        }
+                        else if (temp == "[RUTA]")
+                        {
+                            ruta = file.ReadLine();
+                        }
+                        else if (temp.Trim().Length == 0)
+                        {
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException("Configuración no reconocida");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                ruta = Environment.GetFolderPath(
+                    Environment.SpecialFolder.MyDocuments);
+                
+                GuardarDatos();
             }
         }
 
-        private void OnLoad(object sender, EventArgs e)
+        public void GuardarDatos()
         {
-            directorioArchivos.Text = settings.DarRuta();
-            fondo.Text = settings.DarMonto().ToString("N2");
-            custodio.Text = settings.DarCustodio();
-        }
-
-        private void OnAceptarClick(object sender, EventArgs e)
-        {
-            settings.FijarCustodio(custodio.Text);
-            settings.FijarMonto(Convert.ToDouble(fondo.Text));
-            settings.FijarRuta(directorioArchivos.Text);
-            settings.GuardarDatos();
+            try
+            {
+                using (StreamWriter file = new StreamWriter(archivo))
+                {
+                    file.WriteLine("[CUSTODIO]");
+                    file.WriteLine(custodio);
+                    file.WriteLine("[MONTO]");
+                    file.WriteLine(monto);
+                    file.WriteLine("[RUTA]");
+                    file.WriteLine(ruta);
+                    file.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudo guardar el archivo de configuración.\n"
+                    + e.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
+

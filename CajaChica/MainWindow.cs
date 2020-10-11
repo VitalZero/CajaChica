@@ -13,7 +13,7 @@ namespace CajaChica
 {
     public partial class MainWindow : Form
     {
-        private Settings settings;
+        private Configuracion config;
 
         public MainWindow()
         {
@@ -22,40 +22,39 @@ namespace CajaChica
 
         private void OnFacturasClick(object sender, EventArgs e)
         {
-            FacturasWindow facturas = new FacturasWindow();
-            facturas.ShowDialog();
+            FacturasWindow facturasWindow = new FacturasWindow();
+            facturasWindow.ShowDialog();
         }
 
         private void OnMenuConfigClick(object sender, EventArgs e)
         {
-            Configuracion configuracion = new Configuracion();
-            configuracion.FijarSettings(settings);
-            configuracion.ShowDialog();
+            ConfigWindow configWindow = new ConfigWindow(config);
+            configWindow.ShowDialog();
         }
 
         private void OnMenuDeptoClick(object sender, EventArgs e)
         {
-            Departamentos departamentos = new Departamentos();
-            departamentos.ShowDialog();
+            DeptoWindow deptoWindow = new DeptoWindow();
+            deptoWindow.ShowDialog();
         }
 
         private void OnMenuAcercaDe(object sender, EventArgs e)
         {
-            AboutBox about = new AboutBox();
-            about.ShowDialog();
+            AboutBox aboutWindow = new AboutBox();
+            aboutWindow.ShowDialog();
         }
 
         private void OnMenuCuentasClick(object sender, EventArgs e)
         {
-            Cuentas cuentas = new Cuentas();
-            cuentas.ShowDialog();
+            CuentaWindow cuentaWindow = new CuentaWindow();
+            cuentaWindow.ShowDialog();
         }
 
         private void OnMainWindowLoad(object sender, EventArgs e)
         {
-            settings = new Settings();
-            settings.CargarDatos();
-            fondoAsignado.Text = settings.DarMonto().ToString("N2");
+            config = new Configuracion();
+            config.CargarDatos();
+            fondoAsignado.Text = config.DarMonto().ToString("N2");
 
             //    // Crea archivos vacíos en la ruta configurada por defecto (Mis Documentos)
             //    if(!File.Exists(rutaPorDefecto + "\\cuentas.txt"))

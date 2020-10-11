@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CajaChica
 {
-    public partial class Departamentos : Form
+    public partial class CuentaWindow : Form
     {
-        public Departamentos()
+        public CuentaWindow()
         {
             InitializeComponent();
         }
