@@ -55,7 +55,7 @@
             this.custodio.MaxLength = 3272;
             this.custodio.Name = "custodio";
             this.custodio.Size = new System.Drawing.Size(116, 23);
-            this.custodio.TabIndex = 17;
+            this.custodio.TabIndex = 2;
             // 
             // label1
             // 
@@ -72,17 +72,19 @@
             this.fondo.MaxLength = 3272;
             this.fondo.Name = "fondo";
             this.fondo.Size = new System.Drawing.Size(116, 23);
-            this.fondo.TabIndex = 19;
+            this.fondo.TabIndex = 4;
             this.fondo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnAceptar
             // 
+            this.btnAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAceptar.Location = new System.Drawing.Point(171, 108);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(87, 27);
-            this.btnAceptar.TabIndex = 21;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.OnAceptarClick);
             // 
             // btnCancelar
             // 
@@ -90,7 +92,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(266, 108);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 27);
-            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -99,7 +101,7 @@
             this.directorioArchivos.Location = new System.Drawing.Point(98, 79);
             this.directorioArchivos.Name = "directorioArchivos";
             this.directorioArchivos.Size = new System.Drawing.Size(255, 23);
-            this.directorioArchivos.TabIndex = 23;
+            this.directorioArchivos.TabIndex = 6;
             // 
             // label2
             // 
@@ -115,7 +117,7 @@
             this.btnSeleccionar.Location = new System.Drawing.Point(17, 78);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
-            this.btnSeleccionar.TabIndex = 25;
+            this.btnSeleccionar.TabIndex = 5;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.OnSeleccionarClick);
@@ -140,6 +142,7 @@
             this.MinimizeBox = false;
             this.Name = "Configuracion";
             this.Text = "Configuracion";
+            this.Load += new System.EventHandler(this.OnLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 

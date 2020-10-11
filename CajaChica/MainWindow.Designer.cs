@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Dirección Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Operación Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Planta de Tratamiento", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Dirección Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Operación Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Planta de Tratamiento", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "aaa",
             "b",
             "a"}, -1);
@@ -177,7 +177,7 @@
             this.menuAgregarDepartamento,
             this.menuAgregarCuenta});
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.agregarToolStripMenuItem.Text = "Agregar";
             // 
             // menuAgregarDepartamento
@@ -190,7 +190,7 @@
             // menuAgregarCuenta
             // 
             this.menuAgregarCuenta.Name = "menuAgregarCuenta";
-            this.menuAgregarCuenta.Size = new System.Drawing.Size(180, 22);
+            this.menuAgregarCuenta.Size = new System.Drawing.Size(150, 22);
             this.menuAgregarCuenta.Text = "Cuenta";
             this.menuAgregarCuenta.Click += new System.EventHandler(this.OnMenuCuentasClick);
             // 
@@ -321,20 +321,20 @@
             this.columnHeader3});
             this.listFacturas.FullRowSelect = true;
             this.listFacturas.GridLines = true;
-            listViewGroup7.Header = "Dirección Mantenimiento Campo";
-            listViewGroup7.Name = "lvg1";
-            listViewGroup8.Header = "Operación Mantenimiento Campo";
-            listViewGroup8.Name = "lvg2";
-            listViewGroup9.Header = "Planta de Tratamiento";
-            listViewGroup9.Name = "lvg3";
+            listViewGroup1.Header = "Dirección Mantenimiento Campo";
+            listViewGroup1.Name = "lvg1";
+            listViewGroup2.Header = "Operación Mantenimiento Campo";
+            listViewGroup2.Name = "lvg2";
+            listViewGroup3.Header = "Planta de Tratamiento";
+            listViewGroup3.Name = "lvg3";
             this.listFacturas.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup7,
-            listViewGroup8,
-            listViewGroup9});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.listFacturas.HideSelection = false;
-            listViewItem3.Group = listViewGroup7;
+            listViewItem1.Group = listViewGroup1;
             this.listFacturas.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listFacturas.Location = new System.Drawing.Point(12, 113);
             this.listFacturas.Name = "listFacturas";
             this.listFacturas.Size = new System.Drawing.Size(514, 275);
@@ -356,7 +356,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(532, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 15);
+            this.label6.Size = new System.Drawing.Size(87, 15);
             this.label6.TabIndex = 14;
             this.label6.Text = "Total Solicitado";
             // 
@@ -465,12 +465,13 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(533, 308);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 15);
+            this.label13.Size = new System.Drawing.Size(122, 15);
             this.label13.TabIndex = 27;
             this.label13.Text = "Total Fondo Asignado";
             // 
             // fondoAsignado
             // 
+            this.fondoAsignado.Enabled = false;
             this.fondoAsignado.Location = new System.Drawing.Point(661, 305);
             this.fondoAsignado.MaxLength = 3272;
             this.fondoAsignado.Name = "fondoAsignado";
