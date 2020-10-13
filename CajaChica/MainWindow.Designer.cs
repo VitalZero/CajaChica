@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Dirección Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Operación Mantenimiento Campo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Planta de Tratamiento", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "aaa",
-            "b",
-            "a"}, -1);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuNuevo = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,6 +75,13 @@
             this.fondoAsignado = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.diferencia = new System.Windows.Forms.TextBox();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,47 +116,47 @@
             // menuNuevo
             // 
             this.menuNuevo.Name = "menuNuevo";
-            this.menuNuevo.Size = new System.Drawing.Size(180, 22);
+            this.menuNuevo.Size = new System.Drawing.Size(152, 22);
             this.menuNuevo.Text = "&Nuevo";
             // 
             // menuAbrir
             // 
             this.menuAbrir.Name = "menuAbrir";
-            this.menuAbrir.Size = new System.Drawing.Size(180, 22);
+            this.menuAbrir.Size = new System.Drawing.Size(152, 22);
             this.menuAbrir.Text = "&Abrir";
             // 
             // menuGuardar
             // 
             this.menuGuardar.Name = "menuGuardar";
-            this.menuGuardar.Size = new System.Drawing.Size(180, 22);
+            this.menuGuardar.Size = new System.Drawing.Size(152, 22);
             this.menuGuardar.Text = "&Guardar";
             // 
             // menuGuardarComo
             // 
             this.menuGuardarComo.Name = "menuGuardarComo";
-            this.menuGuardarComo.Size = new System.Drawing.Size(180, 22);
+            this.menuGuardarComo.Size = new System.Drawing.Size(152, 22);
             this.menuGuardarComo.Text = "Guardar Como";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // menuImprimir
             // 
             this.menuImprimir.Name = "menuImprimir";
-            this.menuImprimir.Size = new System.Drawing.Size(180, 22);
+            this.menuImprimir.Size = new System.Drawing.Size(152, 22);
             this.menuImprimir.Text = "Im&primir";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
             // menuSalir
             // 
             this.menuSalir.Name = "menuSalir";
-            this.menuSalir.Size = new System.Drawing.Size(180, 22);
+            this.menuSalir.Size = new System.Drawing.Size(152, 22);
             this.menuSalir.Text = "&Salir";
             // 
             // editarToolStripMenuItem
@@ -298,29 +298,38 @@
             this.listFacturas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
             this.listFacturas.FullRowSelect = true;
             this.listFacturas.GridLines = true;
-            listViewGroup1.Header = "Dirección Mantenimiento Campo";
-            listViewGroup1.Name = "lvg1";
-            listViewGroup2.Header = "Operación Mantenimiento Campo";
-            listViewGroup2.Name = "lvg2";
-            listViewGroup3.Header = "Planta de Tratamiento";
-            listViewGroup3.Name = "lvg3";
-            this.listFacturas.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3});
             this.listFacturas.HideSelection = false;
-            listViewItem1.Group = listViewGroup1;
-            this.listFacturas.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
             this.listFacturas.Location = new System.Drawing.Point(12, 86);
             this.listFacturas.Name = "listFacturas";
             this.listFacturas.Size = new System.Drawing.Size(514, 290);
             this.listFacturas.TabIndex = 12;
             this.listFacturas.UseCompatibleStateImageBehavior = false;
             this.listFacturas.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Proveedor";
+            this.columnHeader1.Width = 200;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "RFC";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Concepto";
+            this.columnHeader3.Width = 150;
             // 
             // solicitado
             // 
@@ -478,6 +487,39 @@
             this.diferencia.TabIndex = 28;
             this.diferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Fecha";
+            this.columnHeader4.Width = 80;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Num Factura";
+            this.columnHeader5.Width = 80;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Cuenta";
+            this.columnHeader6.Width = 80;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Importe";
+            this.columnHeader7.Width = 80;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "I.V.A.";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Retención";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Toal";
+            this.columnHeader10.Width = 80;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -571,6 +613,13 @@
         private System.Windows.Forms.TextBox fondoAsignado;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox diferencia;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }
 

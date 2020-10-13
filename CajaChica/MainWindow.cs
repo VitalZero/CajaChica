@@ -62,6 +62,25 @@ namespace CajaChica
             fondoAsignado.Text = config.DarMonto().ToString("N2");
             cuentas.CargarDatos();
             departamentos.CargarDatos();
+
+            List<string> deptos = departamentos.DarDeptos();
+
+            foreach(string s in deptos)
+            {
+                ListViewGroup grp = new ListViewGroup();
+                grp.Header = s;
+
+                listFacturas.Groups.Add(grp);
+
+                for(int i = 0; i < deptos.Count(); ++i)
+                {
+                    ListViewItem lvItem = new ListViewItem();
+                    lvItem.Text = "Item " + i;
+                    lvItem.Group = grp;
+
+                    listFacturas.Items.Add(lvItem);
+                }
+            }
         }
     }
 }
