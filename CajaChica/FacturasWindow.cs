@@ -44,5 +44,10 @@ namespace CajaChica
                 }
             }
         }
+
+        private void OnAgregarClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

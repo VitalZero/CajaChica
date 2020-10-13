@@ -68,7 +68,6 @@
             this.comprobantes = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.suma = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.prestamos = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -94,7 +93,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(775, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1015, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -289,7 +288,7 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Location = new System.Drawing.Point(12, 75);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(748, 1);
+            this.label5.Size = new System.Drawing.Size(986, 1);
             this.label5.TabIndex = 11;
             this.label5.Text = "label5";
             // 
@@ -311,7 +310,7 @@
             this.listFacturas.HideSelection = false;
             this.listFacturas.Location = new System.Drawing.Point(12, 86);
             this.listFacturas.Name = "listFacturas";
-            this.listFacturas.Size = new System.Drawing.Size(514, 290);
+            this.listFacturas.Size = new System.Drawing.Size(986, 290);
             this.listFacturas.TabIndex = 12;
             this.listFacturas.UseCompatibleStateImageBehavior = false;
             this.listFacturas.View = System.Windows.Forms.View.Details;
@@ -333,7 +332,7 @@
             // 
             // solicitado
             // 
-            this.solicitado.Location = new System.Drawing.Point(660, 86);
+            this.solicitado.Location = new System.Drawing.Point(141, 382);
             this.solicitado.MaxLength = 3272;
             this.solicitado.Name = "solicitado";
             this.solicitado.Size = new System.Drawing.Size(100, 23);
@@ -343,7 +342,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(532, 89);
+            this.label6.Location = new System.Drawing.Point(13, 385);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 15);
             this.label6.TabIndex = 14;
@@ -352,7 +351,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(532, 118);
+            this.label7.Location = new System.Drawing.Point(13, 414);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 15);
             this.label7.TabIndex = 16;
@@ -360,7 +359,7 @@
             // 
             // reembolso
             // 
-            this.reembolso.Location = new System.Drawing.Point(660, 115);
+            this.reembolso.Location = new System.Drawing.Point(141, 411);
             this.reembolso.MaxLength = 3272;
             this.reembolso.Name = "reembolso";
             this.reembolso.Size = new System.Drawing.Size(100, 23);
@@ -370,7 +369,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(532, 147);
+            this.label8.Location = new System.Drawing.Point(13, 443);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 15);
             this.label8.TabIndex = 18;
@@ -378,7 +377,7 @@
             // 
             // efectivo
             // 
-            this.efectivo.Location = new System.Drawing.Point(660, 144);
+            this.efectivo.Location = new System.Drawing.Point(141, 440);
             this.efectivo.MaxLength = 3272;
             this.efectivo.Name = "efectivo";
             this.efectivo.Size = new System.Drawing.Size(100, 23);
@@ -388,7 +387,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(532, 176);
+            this.label9.Location = new System.Drawing.Point(13, 472);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 15);
             this.label9.TabIndex = 20;
@@ -396,7 +395,7 @@
             // 
             // comprobantes
             // 
-            this.comprobantes.Location = new System.Drawing.Point(660, 173);
+            this.comprobantes.Location = new System.Drawing.Point(141, 469);
             this.comprobantes.MaxLength = 3272;
             this.comprobantes.Name = "comprobantes";
             this.comprobantes.Size = new System.Drawing.Size(100, 23);
@@ -406,7 +405,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(532, 205);
+            this.label10.Location = new System.Drawing.Point(13, 501);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 15);
             this.label10.TabIndex = 22;
@@ -415,26 +414,17 @@
             // suma
             // 
             this.suma.Enabled = false;
-            this.suma.Location = new System.Drawing.Point(660, 202);
+            this.suma.Location = new System.Drawing.Point(141, 498);
             this.suma.MaxLength = 3272;
             this.suma.Name = "suma";
             this.suma.Size = new System.Drawing.Size(100, 23);
             this.suma.TabIndex = 21;
             this.suma.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label11
-            // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Location = new System.Drawing.Point(535, 236);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(225, 1);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "label11";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(533, 252);
+            this.label12.Location = new System.Drawing.Point(249, 385);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 15);
             this.label12.TabIndex = 25;
@@ -442,7 +432,7 @@
             // 
             // prestamos
             // 
-            this.prestamos.Location = new System.Drawing.Point(661, 249);
+            this.prestamos.Location = new System.Drawing.Point(377, 382);
             this.prestamos.MaxLength = 3272;
             this.prestamos.Name = "prestamos";
             this.prestamos.Size = new System.Drawing.Size(100, 23);
@@ -452,7 +442,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(533, 281);
+            this.label13.Location = new System.Drawing.Point(249, 414);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(124, 15);
             this.label13.TabIndex = 27;
@@ -461,7 +451,7 @@
             // fondoAsignado
             // 
             this.fondoAsignado.Enabled = false;
-            this.fondoAsignado.Location = new System.Drawing.Point(661, 278);
+            this.fondoAsignado.Location = new System.Drawing.Point(377, 411);
             this.fondoAsignado.MaxLength = 3272;
             this.fondoAsignado.Name = "fondoAsignado";
             this.fondoAsignado.Size = new System.Drawing.Size(100, 23);
@@ -471,7 +461,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(533, 310);
+            this.label14.Location = new System.Drawing.Point(249, 443);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 15);
             this.label14.TabIndex = 29;
@@ -480,7 +470,7 @@
             // diferencia
             // 
             this.diferencia.Enabled = false;
-            this.diferencia.Location = new System.Drawing.Point(661, 307);
+            this.diferencia.Location = new System.Drawing.Point(377, 440);
             this.diferencia.MaxLength = 3272;
             this.diferencia.Name = "diferencia";
             this.diferencia.Size = new System.Drawing.Size(100, 23);
@@ -517,21 +507,20 @@
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Toal";
+            this.columnHeader10.Text = "Total";
             this.columnHeader10.Width = 80;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 391);
+            this.ClientSize = new System.Drawing.Size(1015, 547);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.diferencia);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.fondoAsignado);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.prestamos);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.suma);
             this.Controls.Add(this.label9);
@@ -606,7 +595,6 @@
         private System.Windows.Forms.TextBox comprobantes;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox suma;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox prestamos;
         private System.Windows.Forms.Label label13;
