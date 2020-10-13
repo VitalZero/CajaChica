@@ -14,6 +14,7 @@ namespace CajaChica
     public partial class MainWindow : Form
     {
         private Configuracion config;
+        private Cuentas cuentas;
 
         public MainWindow()
         {
@@ -22,7 +23,7 @@ namespace CajaChica
 
         private void OnFacturasClick(object sender, EventArgs e)
         {
-            FacturasWindow facturasWindow = new FacturasWindow();
+            FacturasWindow facturasWindow = new FacturasWindow(cuentas);
             facturasWindow.ShowDialog();
         }
 
@@ -46,15 +47,18 @@ namespace CajaChica
 
         private void OnMenuCuentasClick(object sender, EventArgs e)
         {
-            CuentaWindow cuentaWindow = new CuentaWindow();
+            CuentaWindow cuentaWindow = new CuentaWindow(cuentas);
             cuentaWindow.ShowDialog();
         }
 
-        private void OnMainWindowLoad(object sender, EventArgs e)
+        private void OnLoad(object sender, EventArgs e)
         {
             config = new Configuracion();
             config.CargarDatos();
             fondoAsignado.Text = config.DarMonto().ToString("N2");
+
+            cuentas = new Cuentas(config);
+            cuentas.CargarDatos();
 
             //    // Crea archivos vacíos en la ruta configurada por defecto (Mis Documentos)
             //    if(!File.Exists(rutaPorDefecto + "\\cuentas.txt"))

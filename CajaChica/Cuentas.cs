@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CajaChica
 {
-    class Cuentas
+    public class Cuentas
     {
         private string archivo;
         private Dictionary<int, string> cuentas;
@@ -17,6 +17,23 @@ namespace CajaChica
         {
             archivo = config.DarRuta() + "\\cuentas.txt";
             cuentas = new Dictionary<int, string>();
+        }
+
+        public int DarConteo()
+        {
+            return cuentas.Count;
+        }
+
+        public List<string> DarCuentas()
+        {
+            List<string> temp = new List<string>();
+
+            foreach(var c in cuentas)
+            {
+                temp.Add(c.Key.ToString() + " " + c.Value);
+            }
+
+            return temp;
         }
 
         public void Agregar(int idCuenta, string descCuenta)
@@ -42,6 +59,8 @@ namespace CajaChica
                         string[] pairs = temp.Split(separator, 2, StringSplitOptions.None);
                         Agregar(Int32.Parse(pairs[0]), pairs[1]);
                     }
+
+                    file.Close();
                 }
             }
             else
@@ -60,6 +79,8 @@ namespace CajaChica
                     {
                         file.WriteLine(c.Key + " " + c.Value);
                     }
+
+                    file.Close();
                 }
             }
             catch(Exception e)

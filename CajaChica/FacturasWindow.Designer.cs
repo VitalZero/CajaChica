@@ -274,6 +274,7 @@
             this.Name = "FacturasWindow";
             this.ShowInTaskbar = false;
             this.Text = "Agregar Facturas";
+            this.Load += new System.EventHandler(this.OnLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 

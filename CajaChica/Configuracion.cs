@@ -63,6 +63,7 @@ namespace CajaChica
                             throw new InvalidOperationException("Configuración no reconocida");
                         }
                     }
+                    file.Close();
                 }
             }
             else

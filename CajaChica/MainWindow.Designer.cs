@@ -536,7 +536,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "Caja Chica";
-            this.Load += new System.EventHandler(this.OnMainWindowLoad);
+            this.Load += new System.EventHandler(this.OnLoad);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -54,6 +54,7 @@
             this.btnAceptar.TabIndex = 33;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.OnAceptarClick);
             // 
             // label1
             // 
@@ -90,7 +91,7 @@
             this.idCuenta.TabIndex = 29;
             this.idCuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Cuentas
+            // CuentaWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Cuentas";
+            this.Name = "CuentaWindow";
             this.Text = "Cuentas";
             this.ResumeLayout(false);
             this.PerformLayout();
