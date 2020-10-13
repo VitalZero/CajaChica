@@ -15,15 +15,17 @@ namespace CajaChica
     {
         private Configuracion config;
         private Cuentas cuentas;
+        private Departamentos departamentos;
 
         public MainWindow()
         {
             InitializeComponent();
+            config = new Configuracion();
         }
 
         private void OnFacturasClick(object sender, EventArgs e)
         {
-            FacturasWindow facturasWindow = new FacturasWindow(cuentas);
+            FacturasWindow facturasWindow = new FacturasWindow(cuentas, departamentos);
             facturasWindow.ShowDialog();
         }
 
@@ -35,7 +37,7 @@ namespace CajaChica
 
         private void OnMenuDeptoClick(object sender, EventArgs e)
         {
-            DeptoWindow deptoWindow = new DeptoWindow();
+            DeptoWindow deptoWindow = new DeptoWindow(departamentos);
             deptoWindow.ShowDialog();
         }
 
@@ -53,24 +55,13 @@ namespace CajaChica
 
         private void OnLoad(object sender, EventArgs e)
         {
-            config = new Configuracion();
             config.CargarDatos();
-            fondoAsignado.Text = config.DarMonto().ToString("N2");
-
             cuentas = new Cuentas(config);
+            departamentos = new Departamentos(config);
+
+            fondoAsignado.Text = config.DarMonto().ToString("N2");
             cuentas.CargarDatos();
-
-            //    // Crea archivos vacíos en la ruta configurada por defecto (Mis Documentos)
-            //    if(!File.Exists(rutaPorDefecto + "\\cuentas.txt"))
-            //    {
-            //        File.OpenWrite(rutaPorDefecto + "\\cuentas.txt");
-            //    }
-
-            //    if (!File.Exists(rutaPorDefecto + "\\departamentos.txt"))
-            //    {
-            //        File.OpenWrite(rutaPorDefecto + "\\departamentos.txt");
-            //    }
-            //}
+            departamentos.CargarDatos();
         }
     }
 }

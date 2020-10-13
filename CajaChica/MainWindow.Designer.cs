@@ -59,8 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.semanaNum = new System.Windows.Forms.TextBox();
-            this.departamentos = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnFacturas = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.listFacturas = new System.Windows.Forms.ListView();
@@ -118,47 +116,47 @@
             // menuNuevo
             // 
             this.menuNuevo.Name = "menuNuevo";
-            this.menuNuevo.Size = new System.Drawing.Size(152, 22);
+            this.menuNuevo.Size = new System.Drawing.Size(180, 22);
             this.menuNuevo.Text = "&Nuevo";
             // 
             // menuAbrir
             // 
             this.menuAbrir.Name = "menuAbrir";
-            this.menuAbrir.Size = new System.Drawing.Size(152, 22);
+            this.menuAbrir.Size = new System.Drawing.Size(180, 22);
             this.menuAbrir.Text = "&Abrir";
             // 
             // menuGuardar
             // 
             this.menuGuardar.Name = "menuGuardar";
-            this.menuGuardar.Size = new System.Drawing.Size(152, 22);
+            this.menuGuardar.Size = new System.Drawing.Size(180, 22);
             this.menuGuardar.Text = "&Guardar";
             // 
             // menuGuardarComo
             // 
             this.menuGuardarComo.Name = "menuGuardarComo";
-            this.menuGuardarComo.Size = new System.Drawing.Size(152, 22);
+            this.menuGuardarComo.Size = new System.Drawing.Size(180, 22);
             this.menuGuardarComo.Text = "Guardar Como";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // menuImprimir
             // 
             this.menuImprimir.Name = "menuImprimir";
-            this.menuImprimir.Size = new System.Drawing.Size(152, 22);
+            this.menuImprimir.Size = new System.Drawing.Size(180, 22);
             this.menuImprimir.Text = "Im&primir";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // menuSalir
             // 
             this.menuSalir.Name = "menuSalir";
-            this.menuSalir.Size = new System.Drawing.Size(152, 22);
+            this.menuSalir.Size = new System.Drawing.Size(180, 22);
             this.menuSalir.Text = "&Salir";
             // 
             // editarToolStripMenuItem
@@ -276,27 +274,9 @@
             this.semanaNum.TabIndex = 6;
             this.semanaNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // departamentos
-            // 
-            this.departamentos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.departamentos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.departamentos.Location = new System.Drawing.Point(460, 42);
-            this.departamentos.Name = "departamentos";
-            this.departamentos.Size = new System.Drawing.Size(300, 23);
-            this.departamentos.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(457, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Departamento";
-            // 
             // btnFacturas
             // 
-            this.btnFacturas.Location = new System.Drawing.Point(12, 71);
+            this.btnFacturas.Location = new System.Drawing.Point(313, 41);
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(75, 23);
             this.btnFacturas.TabIndex = 9;
@@ -307,7 +287,7 @@
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(12, 102);
+            this.label5.Location = new System.Drawing.Point(12, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(748, 1);
             this.label5.TabIndex = 11;
@@ -335,16 +315,16 @@
             listViewItem1.Group = listViewGroup1;
             this.listFacturas.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.listFacturas.Location = new System.Drawing.Point(12, 113);
+            this.listFacturas.Location = new System.Drawing.Point(12, 86);
             this.listFacturas.Name = "listFacturas";
-            this.listFacturas.Size = new System.Drawing.Size(514, 275);
+            this.listFacturas.Size = new System.Drawing.Size(514, 290);
             this.listFacturas.TabIndex = 12;
             this.listFacturas.UseCompatibleStateImageBehavior = false;
             this.listFacturas.View = System.Windows.Forms.View.Details;
             // 
             // solicitado
             // 
-            this.solicitado.Location = new System.Drawing.Point(660, 113);
+            this.solicitado.Location = new System.Drawing.Point(660, 86);
             this.solicitado.MaxLength = 3272;
             this.solicitado.Name = "solicitado";
             this.solicitado.Size = new System.Drawing.Size(100, 23);
@@ -354,16 +334,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(532, 116);
+            this.label6.Location = new System.Drawing.Point(532, 89);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 15);
+            this.label6.Size = new System.Drawing.Size(89, 15);
             this.label6.TabIndex = 14;
             this.label6.Text = "Total Solicitado";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(532, 145);
+            this.label7.Location = new System.Drawing.Point(532, 118);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 15);
             this.label7.TabIndex = 16;
@@ -371,7 +351,7 @@
             // 
             // reembolso
             // 
-            this.reembolso.Location = new System.Drawing.Point(660, 142);
+            this.reembolso.Location = new System.Drawing.Point(660, 115);
             this.reembolso.MaxLength = 3272;
             this.reembolso.Name = "reembolso";
             this.reembolso.Size = new System.Drawing.Size(100, 23);
@@ -381,7 +361,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(532, 174);
+            this.label8.Location = new System.Drawing.Point(532, 147);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 15);
             this.label8.TabIndex = 18;
@@ -389,7 +369,7 @@
             // 
             // efectivo
             // 
-            this.efectivo.Location = new System.Drawing.Point(660, 171);
+            this.efectivo.Location = new System.Drawing.Point(660, 144);
             this.efectivo.MaxLength = 3272;
             this.efectivo.Name = "efectivo";
             this.efectivo.Size = new System.Drawing.Size(100, 23);
@@ -399,7 +379,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(532, 203);
+            this.label9.Location = new System.Drawing.Point(532, 176);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 15);
             this.label9.TabIndex = 20;
@@ -407,7 +387,7 @@
             // 
             // comprobantes
             // 
-            this.comprobantes.Location = new System.Drawing.Point(660, 200);
+            this.comprobantes.Location = new System.Drawing.Point(660, 173);
             this.comprobantes.MaxLength = 3272;
             this.comprobantes.Name = "comprobantes";
             this.comprobantes.Size = new System.Drawing.Size(100, 23);
@@ -417,7 +397,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(532, 232);
+            this.label10.Location = new System.Drawing.Point(532, 205);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 15);
             this.label10.TabIndex = 22;
@@ -426,7 +406,7 @@
             // suma
             // 
             this.suma.Enabled = false;
-            this.suma.Location = new System.Drawing.Point(660, 229);
+            this.suma.Location = new System.Drawing.Point(660, 202);
             this.suma.MaxLength = 3272;
             this.suma.Name = "suma";
             this.suma.Size = new System.Drawing.Size(100, 23);
@@ -436,7 +416,7 @@
             // label11
             // 
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Location = new System.Drawing.Point(535, 263);
+            this.label11.Location = new System.Drawing.Point(535, 236);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(225, 1);
             this.label11.TabIndex = 23;
@@ -445,7 +425,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(533, 279);
+            this.label12.Location = new System.Drawing.Point(533, 252);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 15);
             this.label12.TabIndex = 25;
@@ -453,7 +433,7 @@
             // 
             // prestamos
             // 
-            this.prestamos.Location = new System.Drawing.Point(661, 276);
+            this.prestamos.Location = new System.Drawing.Point(661, 249);
             this.prestamos.MaxLength = 3272;
             this.prestamos.Name = "prestamos";
             this.prestamos.Size = new System.Drawing.Size(100, 23);
@@ -463,16 +443,16 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(533, 308);
+            this.label13.Location = new System.Drawing.Point(533, 281);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 15);
+            this.label13.Size = new System.Drawing.Size(124, 15);
             this.label13.TabIndex = 27;
             this.label13.Text = "Total Fondo Asignado";
             // 
             // fondoAsignado
             // 
             this.fondoAsignado.Enabled = false;
-            this.fondoAsignado.Location = new System.Drawing.Point(661, 305);
+            this.fondoAsignado.Location = new System.Drawing.Point(661, 278);
             this.fondoAsignado.MaxLength = 3272;
             this.fondoAsignado.Name = "fondoAsignado";
             this.fondoAsignado.Size = new System.Drawing.Size(100, 23);
@@ -482,7 +462,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(533, 337);
+            this.label14.Location = new System.Drawing.Point(533, 310);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 15);
             this.label14.TabIndex = 29;
@@ -491,7 +471,7 @@
             // diferencia
             // 
             this.diferencia.Enabled = false;
-            this.diferencia.Location = new System.Drawing.Point(661, 334);
+            this.diferencia.Location = new System.Drawing.Point(661, 307);
             this.diferencia.MaxLength = 3272;
             this.diferencia.Name = "diferencia";
             this.diferencia.Size = new System.Drawing.Size(100, 23);
@@ -502,7 +482,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 403);
+            this.ClientSize = new System.Drawing.Size(775, 391);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.diferencia);
             this.Controls.Add(this.label13);
@@ -523,8 +503,6 @@
             this.Controls.Add(this.listFacturas);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnFacturas);
-            this.Controls.Add(this.departamentos);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.semanaNum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.fechaFin);
@@ -570,8 +548,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox semanaNum;
-        private System.Windows.Forms.TextBox departamentos;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnFacturas;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView listFacturas;

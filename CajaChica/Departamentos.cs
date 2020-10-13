@@ -8,23 +8,23 @@ using System.Windows.Forms;
 
 namespace CajaChica
 {
-    public class Cuentas
+    public class Departamentos
     {
         private string archivo;
-        private Dictionary<int, string> cuentas;
+        private Dictionary<int, string> departamentos;
 
-        public Cuentas(Configuracion config)
+        public Departamentos(Configuracion config)
         {
-            archivo = config.DarRuta() + "\\cuentas.txt";
-            cuentas = new Dictionary<int, string>();
+            archivo = config.DarRuta() + "\\departamentos.txt";
+            departamentos = new Dictionary<int, string>();
         }
 
         public int DarConteo()
         {
-            return cuentas.Count;
+            return departamentos.Count;
         }
 
-        public List<string> DarCuentas()
+        public List<string> DarDeptos()
         {
             if(DarConteo() == 0)
             {
@@ -33,33 +33,34 @@ namespace CajaChica
 
             List<string> temp = new List<string>();
 
-            foreach(var c in cuentas)
+            foreach(var d in departamentos)
             {
-                temp.Add(c.Key.ToString() + " " + c.Value);
+                // + " " + d.Key.ToString()
+                temp.Add(d.Value);
             }
 
             return temp;
         }
 
-        public void Agregar(int idCuenta, string descCuenta)
+        public void Agregar(int idDepto, string descDepto)
         {
-            if(!cuentas.ContainsKey(idCuenta))
+            if(!departamentos.ContainsKey(idDepto))
             {
-                cuentas.Add(idCuenta, descCuenta);
+                departamentos.Add(idDepto, descDepto);
             }
         }
 
         public void CargarDatos()
         {
-            if(File.Exists(archivo))
+            if (File.Exists(archivo))
             {
-                cuentas.Clear();
+                departamentos.Clear();
 
-                using(StreamReader file = new StreamReader(archivo))
+                using (StreamReader file = new StreamReader(archivo))
                 {
                     string temp;
                     char[] separator = { ' ' };
-                    while((temp = file.ReadLine()) != null)
+                    while ((temp = file.ReadLine()) != null)
                     {
                         string[] pairs = temp.Split(separator, 2, StringSplitOptions.None);
                         Agregar(Int32.Parse(pairs[0]), pairs[1]);
@@ -81,15 +82,15 @@ namespace CajaChica
             {
                 using (StreamWriter file = new StreamWriter(archivo))
                 {
-                    foreach (var c in cuentas)
+                    foreach (var d in departamentos)
                     {
-                        file.WriteLine(c.Key + " " + c.Value);
+                        file.WriteLine(d.Key + " " + d.Value);
                     }
 
                     file.Close();
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("No se pudo guardar el archivo de cuentas.\n"
                     + e.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);

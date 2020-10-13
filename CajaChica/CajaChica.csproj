@@ -65,6 +65,7 @@
     <Compile Include="CuentaWindow.Designer.cs">
       <DependentUpon>CuentaWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Departamentos.cs" />
     <Compile Include="DeptoWindow.cs">
       <SubType>Form</SubType>
     </Compile>

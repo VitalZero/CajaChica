@@ -12,9 +12,24 @@ namespace CajaChica
 {
     public partial class DeptoWindow : Form
     {
-        public DeptoWindow()
+        private Departamentos departamentos;
+
+        public DeptoWindow(Departamentos departamentos)
         {
             InitializeComponent();
+            this.departamentos = departamentos;
+        }
+
+        private void OnAceptarClick(object sender, EventArgs e)
+        {
+            departamentos.Agregar(Convert.ToInt32(idDepartamento.Text), descripcion.Text);
+
+            idDepartamento.Text = "";
+            descripcion.Text = "";
+
+            departamentos.GuardarDatos();
+
+            this.Close();
         }
     }
 }

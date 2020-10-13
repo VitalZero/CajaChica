@@ -54,6 +54,7 @@
             this.btnAceptar.TabIndex = 27;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.OnAceptarClick);
             // 
             // label1
             // 
@@ -90,7 +91,7 @@
             this.idDepartamento.TabIndex = 23;
             this.idDepartamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Departamentos
+            // DeptoWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Departamentos";
+            this.Name = "DeptoWindow";
             this.Text = "Departamentos";
             this.ResumeLayout(false);
             this.PerformLayout();
