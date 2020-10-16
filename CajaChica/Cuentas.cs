@@ -26,10 +26,10 @@ namespace CajaChica
 
         public List<string> DarCuentas()
         {
-            if(DarConteo() == 0)
-            {
-                return null;
-            }
+            //if(DarConteo() == 0)
+            //{
+            //    return null;
+            //}
 
             List<string> temp = new List<string>();
 
